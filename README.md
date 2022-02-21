@@ -36,7 +36,8 @@ encourage people to care their body
 ★딥러닝 무조건 넣을거임
 
 ※참고할 자료
-https://github.com/Youngseo-Jeon0313/baekjoon/blob/main/algorithm.md
+
+https://docs.djangoproject.com/ko/4.0/intro/
 https://ko.reactjs.org/docs/test-utils.html
 https://ko.javascript.info/
 일단 공식문서 먼저 보고, 앱 코드 짜기 전에 다른 사람들 꺼 먼저 이해해본 후->손으로 한 번 써보면서 이해하고-> 내 껄로 만든 후-> 작성
