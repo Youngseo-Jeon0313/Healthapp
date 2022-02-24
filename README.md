@@ -40,6 +40,7 @@ encourage people to care their body
 https://docs.djangoproject.com/ko/4.0/intro/
 https://ko.reactjs.org/docs/test-utils.html
 https://ko.javascript.info/
+CSS -https://developer.mozilla.org/ko/docs/Web/CSS/:hover
 일단 공식문서 먼저 보고, 앱 코드 짜기 전에 다른 사람들 꺼 먼저 이해해본 후->손으로 한 번 써보면서 이해하고-> 내 껄로 만든 후-> 작성
 (시간 많이 걸려도 된다 1년 잡기)
 이후 django/spring(★선호)을 이용한 서버 구축 공부도 함꼐
