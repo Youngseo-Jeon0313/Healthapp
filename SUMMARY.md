@@ -6,8 +6,13 @@
 ## react\_native
 
 * [참고하며 사용할 사이트들](react\_native/undefined.md)
-* [각종 솔루션](react\_native/undefined-1/README.md)
+* [각종 솔루션](react\_native/untitled.md)
   * [컴포턴트](react\_native/undefined-1/undefined.md)
+  * [props](react\_native/undefined-1/props.md)
+  * [동적 화면](react\_native/undefined-1/undefined-1.md)
+  * [CSS](react\_native/undefined-1/css/README.md)
+    * [정렬](react\_native/undefined-1/css/undefined.md)
+    * [background](react\_native/undefined-1/css/background.md)
 
 ## django
 
