@@ -1,3 +1,7 @@
+---
+description: rnfe !! 바로 function 만들어진다!
+---
+
 # 컴포턴트
 
 되도록 프로젝트 디렉터리에 components라는 디렉토리 만든 후 파일 생성해 불러오기
