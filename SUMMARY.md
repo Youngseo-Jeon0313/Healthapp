@@ -10,12 +10,14 @@
   * [컴포턴트](react\_native/undefined-1/undefined.md)
   * [props](react\_native/undefined-1/props.md)
   * [동적 화면](react\_native/undefined-1/undefined-1.md)
+  * [javascript적 표현](react\_native/undefined-1/javascript.md)
   * [CSS](react\_native/undefined-1/css/README.md)
     * [정렬](react\_native/undefined-1/css/undefined.md)
     * [background](react\_native/undefined-1/css/background.md)
     * [색깔](react\_native/undefined-1/css/undefined-1.md)
     * [vh? vw? %?](react\_native/undefined-1/css/vh-vw.md)
     * [etc](react\_native/undefined-1/css/etc.md)
+  * [Images](react\_native/undefined-1/images.md)
 
 ## django
 
