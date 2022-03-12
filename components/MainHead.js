@@ -8,7 +8,6 @@ function MainHead() {
         </View>
     );
 }
-
 const styles = StyleSheet.create({
     block : {
         padding:16,
@@ -20,5 +19,8 @@ const styles = StyleSheet.create({
     }
 })
 
-
 export default MainHead;
+
+
+
+
