@@ -18,7 +18,7 @@ space-evenly(FireFox Only)         >> 첫번째로 오는 정렬 대상 전에 �
 
 마지막 정렬 대상 이후의 간격이 같도록 항목이 분산 됩니다.
 
-![](../../../.gitbook/assets/image.png)flex direction: row
+![](<../../../.gitbook/assets/image (1).png>)flex direction: row
 
 [https://ipex.tistory.com/entry/CSS3-flex-Box-justifycontent-alignitems](https://ipex.tistory.com/entry/CSS3-flex-Box-justifycontent-alignitems) 참
 
