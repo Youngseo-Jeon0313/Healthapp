@@ -1,23 +1,23 @@
-import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import React,{useState} from "react";
+import {View, Text, TextInput, StyleSheet, Alert, Button} from "react-native";
+
 
 function MainHead() {
+    const [text, setText] =useState('운동하고 싶은 부위를 검색하세요! ');
     return (
-        <View style={styles.block}>
-            <Text style={styles.appName}>HealthApp</Text>
-        </View>
+
+            <View style={{backgroundColor:'skyblue',flexDirection:'row',justifyContent:'space-around',alignContent:'center',alignItems:'center'}}>
+                <Text style={{fontSize:20,color:'#000000',fontWeight:'500'}}>압도적 헬스앱</Text>
+                <TextInput 
+                style={{height:22, borderColor:'steelblue',  borderWidth: 1,padding:0,margin:0,width:200}}
+                onChangeText={newText => setText(newText)}
+                defaultValue = {text}/>
+                <Button title='검색' onPress={()=> Alert.alert('검색창에 검색했음!!')}></Button>
+            </View>
+    
     );
 }
-const styles = StyleSheet.create({
-    block : {
-        padding:16,
-        backgroundColor: 'white'
-    },
-    appName: {
-        fontSize:22,
-        color:'black',
-    }
-})
+
 
 export default MainHead;
 

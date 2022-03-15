@@ -3,13 +3,11 @@ import React from 'react'
 
 const SubHead = () => {
   return (
-    <View style={{marginBottom:13}}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} >
+    <View style={{flexDirection:'row',height:30,justifyContent:'space-around',alignContent:'center',alignItems:'center'}}>
             <Text style={styles.banner}>다이어리</Text>
             <Text style={styles.banner}>눈바디</Text>
             <Text style={styles.banner}>식단기록</Text>
             <Text style={styles.banner}>운동하기</Text>
-        </ScrollView>
     </View>
   )
 }
@@ -17,7 +15,8 @@ const SubHead = () => {
 const styles = StyleSheet.create({
     banner : {
         paddingLeft:16,
-        backgroundColor: 'white'
+        backgroundColor: 'powderblue',
+        fontWeight:'100'
     },
 })
 export default SubHead;
