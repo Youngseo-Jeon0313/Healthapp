@@ -1,13 +1,26 @@
-import { View,Text, ScrollView, StyleSheet } from 'react-native'
-import React from 'react'
+import { View,Text, StyleSheet, TouchableOpacity} from 'react-native'
+import React, {useState} from 'react'
+
+
+
 
 const SubHead = () => {
+  const [activeTab, setActiveTab] =useState('Home')
+
   return (
-    <View style={{flexDirection:'row',height:30,justifyContent:'space-around',alignContent:'center',alignItems:'center'}}>
-            <Text style={styles.banner}>다이어리</Text>
-            <Text style={styles.banner}>눈바디</Text>
-            <Text style={styles.banner}>식단기록</Text>
-            <Text style={styles.banner}>운동하기</Text>
+    <View style={{flexDirection:'row',height:30,justifyContent:'space-around',alignContent:'center',alignItems:'center',backgroundColor: 'powderblue'}}>
+          <TouchableOpacity onPress={() => setActiveTab('diary')}>
+            <Text style={styles.banner}>Mine</Text>
+          </TouchableOpacity> 
+          <TouchableOpacity onPress={() => setActiveTab('bodyseeing')}>
+            <Text style={styles.banner}>오늘의 운동</Text>
+          </TouchableOpacity> 
+          <TouchableOpacity onPress={() => setActiveTab('food')}>
+            <Text style={styles.banner}>광고</Text>
+          </TouchableOpacity>   
+          <TouchableOpacity onPress={() => setActiveTab('exercise')}>
+            <Text style={styles.banner}>찜</Text>
+          </TouchableOpacity>   
     </View>
   )
 }
@@ -15,7 +28,6 @@ const SubHead = () => {
 const styles = StyleSheet.create({
     banner : {
         paddingLeft:16,
-        backgroundColor: 'powderblue',
         fontWeight:'100'
     },
 })

@@ -3,22 +3,16 @@ import {SafeAreaView, ScrollView, Text} from 'react-native';
 import MainHead from './components/MainHead';
 import SubHead from './components/SubHead';
 import MainFooter from './components/MainFooter';
+import {Goals} from '../data/goal';
 
 function App(){
 return (
-
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1}}>
       <MainHead/>
-      <SubHead/>
-      <ScrollView>
-        <Text>
-          사과
-          당근
-          참외
-          메론
-          게임
-        </Text>
-      </ScrollView>
+        <SubHead/>
+        <ScrollView>
+        
+        </ScrollView>
       <MainFooter/>
     </SafeAreaView>
   );
