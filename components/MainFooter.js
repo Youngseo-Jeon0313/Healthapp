@@ -1,11 +1,11 @@
 import { View, Text,StyleSheet, TouchableOpacity } from 'react-native'
 import React,{useState} from 'react'
 
-const MainFooter = () => {
-  const [activeTab, setActiveTab] =useState('Home')
+
+const MainFooter = (navigation) => {
   return (
     <View style={{posiion:'absolute',flexDirection:'row',height:30,justifyContent:'space-around',alignContent:'center',alignItems:'center',backgroundColor: 'powderblue'}}>
-          <TouchableOpacity onPress={() => setActiveTab('Homescreen')}>
+          <TouchableOpacity onPress={() => navigation.push('Diary')}>
             <Text style={styles.banner}>홈</Text>
           </TouchableOpacity> 
           <TouchableOpacity onPress={() => setActiveTab('Diary')}>

@@ -4,9 +4,10 @@ import MainHead from './components/MainHead';
 import SubHead from './components/SubHead';
 import MainFooter from './components/MainFooter';
 import {Goals} from '../data/goal';
-
+import {NavigationContainer} from '@react-navigation/native';
 function App(){
 return (
+  <NavigationContainer>
     <SafeAreaView style={{flex:1}}>
       <MainHead/>
         <SubHead/>
@@ -15,6 +16,7 @@ return (
         </ScrollView>
       <MainFooter/>
     </SafeAreaView>
+    </NavigationContainer>
   );
 
 }
