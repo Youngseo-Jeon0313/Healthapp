@@ -1,9 +1,12 @@
 import React from 'react';
 import {View} from 'react-native';
+import Navigation from './Navigation'
 
 function App(){
 return (
-    <View>mainpage</View>
+  <>
+  <Navigation></Navigation>  
+  </>  
   );
 
 }

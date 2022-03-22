@@ -1,12 +1,11 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import {createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import {SafeAreaView, ScrollView, Text} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 import MainHead from './components/MainHead';
 import SubHead from './components/SubHead';
 import MainFooter from './components/MainFooter';
-import {Goals} from '../data/goal';
+import {Calendar} from './components/Diary/Calendar';
 
 const Stack = createStackNavigator()
 
@@ -14,28 +13,31 @@ const screenOptions = {
     headerShown:false,
 }
 
-const SignedInStack = () => (
+const SignedInStack = () => {
+  return(
     <NavigationContainer>
         <Stack.Navigator
             initialRouteName='Homescreen'
             screenOptions={screenOptions}>
-            <Stack.Screen name='Homescreen' component={Goal}></Stack.Screen>
-            <Stack.Screen name='Diary' component={Calendar}></Stack.Screen>
+        
         </Stack.Navigator>
     </NavigationContainer>
 )
-
-const navigation = () => {
-  return (
-    <SafeAreaView style={{flex:1}}>
-      <MainHead/>
-        <SubHead/>
-        <ScrollView>
-        
-        </ScrollView>
-      <MainFooter/>
-    </SafeAreaView>
-  )
 }
 
-export default navigation
+function Navigation() {
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <MainHead />
+      <SubHead />
+      <ScrollView>
+        <SignedInStack>
+
+        </SignedInStack>
+      </ScrollView>
+      <MainFooter />
+    </SafeAreaView>
+  );
+}
+
+export default Navigation;
