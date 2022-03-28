@@ -1,15 +1,33 @@
 import React from 'react';
-import {View} from 'react-native';
-import Navigation from './Navigation'
+import {ScrollView} from 'react-native';
+import MainFooter from './components/MainFooter'
+import MainHead from './components/MainHead';
+import SubHead from './components/SubHead';
+import {NavigationContainer } from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-function App(){
+
+
+function HomeScreen(){
 return (
   <>
-  <Navigation></Navigation>  
+  <MainHead/>
+  <SubHead/>
+  <ScrollView></ScrollView>
+  <MainFooter/>
   </>  
   );
-
 }
 
+const Stack = createNativeStackNavigator();
 
+function App(){
+  return(
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
 export default App;

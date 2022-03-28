@@ -5,20 +5,19 @@ import React, {useState} from 'react'
 
 
 const SubHead = () => {
-  const [activeTab, setActiveTab] =useState('Home')
 
   return (
     <View style={{flexDirection:'row',height:30,justifyContent:'space-around',alignContent:'center',alignItems:'center',backgroundColor: 'powderblue'}}>
-          <TouchableOpacity onPress={() => setActiveTab('diary')}>
+          <TouchableOpacity >
             <Text style={styles.banner}>Mine</Text>
           </TouchableOpacity> 
-          <TouchableOpacity onPress={() => setActiveTab('bodyseeing')}>
+          <TouchableOpacity >
             <Text style={styles.banner}>오늘의 운동</Text>
           </TouchableOpacity> 
-          <TouchableOpacity onPress={() => setActiveTab('food')}>
+          <TouchableOpacity >
             <Text style={styles.banner}>광고</Text>
           </TouchableOpacity>   
-          <TouchableOpacity onPress={() => setActiveTab('exercise')}>
+          <TouchableOpacity >
             <Text style={styles.banner}>찜</Text>
           </TouchableOpacity>   
     </View>

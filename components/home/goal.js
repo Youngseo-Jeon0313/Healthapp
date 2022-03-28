@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, {useState} from 'react'
 import {Modal, Portal, Button, Provider} from 'react-native-paper'
-const Goal = () => {
+const goal = () => {
     const [visible, setVisible] =useState(false);
     const showModal = () => setVisible(true);
     const hideModal = () => setVisible(false);
@@ -27,4 +27,4 @@ const Goal = () => {
   )
 }
 
-export default Goal;
+export default goal;

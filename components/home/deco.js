@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Navigation = () => {
+const deco = () => {
   return (
     <View>
-      <Text>Navigation</Text>
+      <Text>오운완</Text>
     </View>
   )
 }
 
-export default Navigation;
+export default deco

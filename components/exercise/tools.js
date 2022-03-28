@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Navigation = () => {
+const tools = () => {
   return (
     <View>
-      <Text>Navigation</Text>
+      <Text>팔아여</Text>
     </View>
   )
 }
 
-export default Navigation;
+export default tools

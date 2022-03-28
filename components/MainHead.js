@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { View, Text, TextInput, StyleSheet, Alert, Button} from "react-native";
+import { View, Text, TextInput, Alert, Button} from "react-native";
 
 function MainHead() {
     const [text, setText] =useState('운동하고 싶은 부위를 검색하세요! ');

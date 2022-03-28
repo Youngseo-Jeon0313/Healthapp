@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Navigation = () => {
+const hearts = () => {
   return (
     <View>
-      <Text>Navigation</Text>
+      <Text>hearts</Text>
     </View>
   )
 }
 
-export default Navigation;
+export default hearts
