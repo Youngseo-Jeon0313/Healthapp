@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const write = () => {
+const Write = () => {
   return (
     <View>
       <Text>write</Text>
@@ -9,4 +9,4 @@ const write = () => {
   )
 }
 
-export default write
+export default Write

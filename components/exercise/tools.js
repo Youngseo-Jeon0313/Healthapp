@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const tools = () => {
+const Tools = () => {
   return (
     <View>
       <Text>팔아여</Text>
@@ -9,4 +9,4 @@ const tools = () => {
   )
 }
 
-export default tools
+export default Tools

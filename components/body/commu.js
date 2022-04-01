@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const commu = () => {
+const Commu = () => {
   return (
     <View>
       <Text>commu</Text>
@@ -9,4 +9,4 @@ const commu = () => {
   )
 }
 
-export default commu
+export default Commu

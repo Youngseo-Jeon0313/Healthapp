@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const hearts = () => {
+const Hearts = () => {
   return (
     <View>
       <Text>hearts</Text>
@@ -9,4 +9,4 @@ const hearts = () => {
   )
 }
 
-export default hearts
+export default Hearts

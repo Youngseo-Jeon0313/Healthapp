@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const gallery = () => {
+const Gallery = () => {
   return (
     <View>
       <Text>gallery</Text>
@@ -9,4 +9,4 @@ const gallery = () => {
   )
 }
 
-export default gallery
+export default Gallery

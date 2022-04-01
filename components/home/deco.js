@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const deco = () => {
+const Deco = () => {
   return (
     <View>
       <Text>오운완</Text>
@@ -9,4 +9,4 @@ const deco = () => {
   )
 }
 
-export default deco
+export default Deco

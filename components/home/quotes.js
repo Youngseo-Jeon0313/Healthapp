@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const quotes = () => {
+const Quotes = () => {
   return (
     <View>
-      <Text>quotes</Text>
+      <Text> Quotes</Text>
     </View>
   )
 }
 
-export default quotes
+export default  Quotes

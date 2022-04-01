@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const timer = () => {
+const Timer = () => {
   return (
     <View>
-      <Text>timer</Text>
+      <Text>Timer</Text>
     </View>
   )
 }
 
-export default timer
+export default Timer
