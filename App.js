@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 import Login from './screens/LoginScreen/Login'
-
+import Navigation from './Navigation'
 
 const App = () => {
 

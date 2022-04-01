@@ -1,5 +1,5 @@
 import { View, Text} from 'react-native'
-import React,{useEffect, useState} from 'react'
+import React from 'react'
 import {GoogleSigninButton} from '@react-native-google-signin/google-signin';
 
 const Login = (props) => {
