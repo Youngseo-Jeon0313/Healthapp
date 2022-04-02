@@ -8,25 +8,18 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 const Tab = createMaterialTopTabNavigator();
 
 
-
-const SubHead = ({navigation}) => {
+const Foodnavi = ({}) => {
   return (
-    
-    <Tab.Navigator>
+    <Tab.Navigator 
+    screenOptions={{
+      tabBarLabelStyle:{fontSize:12},
+      tabBarItemStyle:{width:100},
+      tabBarStyle:{backgroundColor:'powderblue'}
+    }}>
       <Tab.Screen name="Calorie" component={Calorie} onPress={() => navigation.navigate('Calorie')}/>
       <Tab.Screen name="Food" component={Food} onPress={() => navigation.navigate('Food')}/>
       <Tab.Screen name="Gallery" component={Gallery} onPress={() => navigation.navigate('Gallery')}/>
     </Tab.Navigator>
-    
-  )
-}
-const Foodnavi = ({}) => {
-  return (
-    <View>
-      <MainHead/>
-      <SubHead/>
-      <Text>foodnavi</Text>
-    </View>
   )
 }
 

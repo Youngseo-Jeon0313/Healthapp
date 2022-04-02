@@ -10,24 +10,17 @@ const Tab = createMaterialTopTabNavigator();
 
 
 
-const SubHead = ({navigation}) => {
+const Bodynavi = () => {
   return (
-    
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{
+      tabBarLabelStyle:{fontSize:12},
+      tabBarItemStyle:{width:100},
+      tabBarStyle:{backgroundColor:'powderblue'}
+    }}>
       <Tab.Screen options={{headerShown:false}} name="Clothes" component={Clothes} onPress={() => navigation.navigate('Clothes')}/>
       <Tab.Screen options={{headerShown:false}}name="Commu" component={Commu} onPress={() => navigation.navigate('Commu')}/>
       <Tab.Screen options={{headerShown:false}}name="Gallery" component={Gallery} onPress={() => navigation.navigate('Gallery')}/>
     </Tab.Navigator>
-    
-  )
-}
-const Bodynavi = () => {
-  return (
-    <View>
-      <MainHead/>
-      <SubHead/>
-      <Text>bodynavi</Text>
-    </View>
   )
 }
 

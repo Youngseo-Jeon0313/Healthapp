@@ -66,7 +66,7 @@ const Navigation = ({navigation}) => {
       
     })}
     >
-      <Tab.Screen options={{headerShown:false}}name="Home" component={Homenavi} onPress={() => navigation.navigate('Home')}/>
+      <Tab.Screen options={{headerShown:false}}name="Home" children={Homenavi} onPress={() => navigation.navigate('Home')}/>
       <Tab.Screen options={{headerShown:false}}name="Diary" component={Diarynavi} onPress={() => navigation.navigate('Diary')}/>
       <Tab.Screen options={{headerShown:false}}name="Exercise" component={Exercisenavi} onPress={() => navigation.navigate('Exercise')}/>
       <Tab.Screen options={{headerShown:false}}name="Body" component={Bodynavi} onPress={() => navigation.navigate('Body')} />

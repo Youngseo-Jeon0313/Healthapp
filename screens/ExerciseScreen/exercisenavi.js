@@ -11,26 +11,19 @@ const Tab = createMaterialTopTabNavigator();
 
 
 
-const SubHead = ({navigation}) => {
+const Exercisenavi = ({}) => {
   return (
-    
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{
+      tabBarLabelStyle:{fontSize:12},
+      tabBarItemStyle:{width:100},
+      tabBarStyle:{backgroundColor:'powderblue'}
+    }}>
       <Tab.Screen name="Hearts" component={Hearts} onPress={() => navigation.navigate('Hearts')}/>
       <Tab.Screen name="Learn" component={Learn} onPress={() => navigation.navigate('Learn')}/>
       <Tab.Screen name="Search" component={Search} onPress={() => navigation.navigate('Search')}/>
       <Tab.Screen name="Timer" component={Timer} onPress={() => navigation.navigate('Timer')}/>
       <Tab.Screen name="Tools" component={Tools} onPress={() => navigation.navigate('Tools')}/>
     </Tab.Navigator>
-    
-  )
-}
-const Exercisenavi = ({}) => {
-  return (
-    <View>
-      <MainHead/>
-      <SubHead/>
-      <Text>exercisenavi</Text>
-    </View>
   )
 }
 

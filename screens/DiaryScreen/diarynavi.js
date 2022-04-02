@@ -7,24 +7,16 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 const Tab = createMaterialTopTabNavigator();
 
 
-
-const SubHead = ({navigation}) => {
+const Diarynavi = ({navigation}) => {
   return (
-    
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{
+      tabBarLabelStyle:{fontSize:12},
+      tabBarItemStyle:{width:100},
+      tabBarStyle:{backgroundColor:'powderblue'}
+    }}>
       <Tab.Screen name="Calendar" component={Calendar} onPress={() => navigation.navigate('Calendar')}/>
       <Tab.Screen name="Write" component={Write} onPress={() => navigation.navigate('Write')}/>
     </Tab.Navigator>
-    
-  )
-}
-const Diarynavi = ({navigation}) => {
-  return (
-    <View>
-      <MainHead/>
-      <SubHead/>
-      <Text>diarynavi</Text>
-    </View>
   )
 }
 
