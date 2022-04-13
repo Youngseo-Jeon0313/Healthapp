@@ -22,6 +22,7 @@
     "npm": "^8.5.5",
     "react": "17.0.2",
     "react-native": "0.67.2",
+    "react-native-calendars": "^1.1282.0",
     "react-native-gesture-handler": "^2.3.2",
     "react-native-pager-view": "^5.4.15",
     "react-native-paper": "^4.11.2",
