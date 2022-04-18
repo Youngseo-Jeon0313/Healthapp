@@ -12,13 +12,16 @@ const Calendarpage = () => {
   const [description, setdescription]=useState('');
 
   const handleSubmit = async() => {
-      axios
-        .post(`${API_URL}/diaries`, {
-          date: date,
-          description: description,
-        })
-        .then(values => {
-          console.log(values);
+      axios({
+        url:"http://10.0.2.2:8888",
+        method:'post',
+        data:{
+          date:date,
+          description:description
+        }
+      })
+        .then(response => {
+          console.log(response);
         })
         .catch(error => console.log(error));
 
