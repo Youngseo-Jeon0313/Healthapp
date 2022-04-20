@@ -11,20 +11,16 @@ const Calendarpage = () => {
   const [modalVisible,setModalVisible]=useState(false);
   const [description, setdescription]=useState('');
 
-  const handleSubmit = async() => {
-      axios({
-        url:"http://10.0.2.2:8888",
-        method:'post',
-        data:{
+  const handleSubmit =(e) => {
+      e.preventDefault();
+      axios.post('http://10.0.2.2:8080/diary',{
           date:date,
           description:description
-        }
-      })
+        })
         .then(response => {
-          console.log(response);
+          console.log('response',response);
         })
         .catch(error => console.log(error));
-
   }
 
   return (
@@ -41,6 +37,7 @@ const Calendarpage = () => {
         <Pressable
         style={styles.box}
         onPress = {()=>setModalVisible(!modalVisible)}>
+          
         <Text 
         value={date}>해당날짜 : {date}</Text>
         <TextInput
@@ -51,12 +48,11 @@ const Calendarpage = () => {
           placeholder='오늘 운동을 계획하고 반성해보세요'
           onChangeText={(description)=>setdescription(description)}/>
         </Pressable>
+        </Form>
         <Button
           onPress={handleSubmit}
           title="Submit!"
-          type = "sumbit"
           style={styles.button}/>
-        </Form>
       </Modal>
       <Text>날짜를 클릭해 일기를 확인해보세요!</Text>
       <Calendar
