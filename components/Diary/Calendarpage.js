@@ -11,7 +11,7 @@ const Calendarpage = () => {
   const [modalVisible,setModalVisible]=useState(false);
   const [description, setdescription]=useState('');
 
-  const handleSubmit =(e) => {
+  const handleSubmit =async(e) => {
       e.preventDefault();
       axios.post('http://10.0.2.2:8080/diary',{
           date:date,
