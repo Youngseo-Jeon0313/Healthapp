@@ -3,7 +3,16 @@ import {Form} from 'react-native-form-component';
 import React,{useState} from 'react'
 import {Calendar} from 'react-native-calendars';
 import axios from 'axios';
+import moment from 'moment';
 import API_URL from '../../config/constants';
+
+export function changeFormat(date) {
+  if (moment(date).isValid()) {
+    return moment(date).format('YYYY-MM-DD');
+  } else {
+    return '2022-04-21';
+  }
+}
 
 const Calendarpage = () => {
 
@@ -11,16 +20,13 @@ const Calendarpage = () => {
   const [modalVisible,setModalVisible]=useState(false);
   const [description, setdescription]=useState('');
 
-  const handleSubmit =async(e) => {
-      e.preventDefault();
-      axios.post('http://10.0.2.2:8080/diary',{
-          date:date,
-          description:description
-        })
-        .then(response => {
-          console.log('response',response);
-        })
-        .catch(error => console.log(error));
+  const handleSubmit =async() => {
+    let data = JSON.stringify({
+      date:date,
+      description:description
+    })
+      axios.post('http://10.0.2.2:8080/diary',data)
+      .then(response => console.log(response))
   }
 
   return (
@@ -37,7 +43,6 @@ const Calendarpage = () => {
         <Pressable
         style={styles.box}
         onPress = {()=>setModalVisible(!modalVisible)}>
-          
         <Text 
         value={date}>해당날짜 : {date}</Text>
         <TextInput
@@ -61,6 +66,7 @@ const Calendarpage = () => {
         onDayPress={(day)=>{
           setDate(day.dateString)
           setModalVisible(true)
+          console.log({date})
         }
        }/>
     </ScrollView>
