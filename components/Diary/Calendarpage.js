@@ -21,13 +21,19 @@ const Calendarpage = () => {
   const [description, setdescription]=useState('');
 
   const handleSubmit =async() => {
-    let data = JSON.stringify({
-      date:date,
-      description:description
-    })
-      axios.post('http://10.0.2.2:8080/diary',data)
-      .then(response => console.log(response))
-  }
+    try{
+      const resp = await axios.post('http://10.0.2.2:8080/diary',
+      {
+        "date":date,
+        "description":toString(description)
+      });
+      console.log(resp.data);
+      resp.errorBody().string()
+    } catch(err) {
+      console.log(err)
+    }
+
+      }
 
   return (
     <ScrollView>
@@ -66,7 +72,6 @@ const Calendarpage = () => {
         onDayPress={(day)=>{
           setDate(day.dateString)
           setModalVisible(true)
-          console.log({date})
         }
        }/>
     </ScrollView>
