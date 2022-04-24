@@ -25,7 +25,7 @@ const Calendarpage = () => {
       const resp = await axios.post('http://10.0.2.2:8080/diary',
       {
         "date":date,
-        "description":toString(description)
+        "description":description
       });
       console.log(resp.data);
       resp.errorBody().string()
@@ -52,12 +52,13 @@ const Calendarpage = () => {
         <Text 
         value={date}>해당날짜 : {date}</Text>
         <TextInput
-          value={description}
           multiline
           style={styles.input}
           numberOfLines={8}
           placeholder='오늘 운동을 계획하고 반성해보세요'
-          onChangeText={(description)=>setdescription(description)}/>
+          onChangeText={(description)=>setdescription(description)}
+          value={description}
+          />
         </Pressable>
         </Form>
         <Button
