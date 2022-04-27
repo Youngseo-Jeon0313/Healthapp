@@ -1,4 +1,4 @@
-import {Text,View, TextInput,StyleSheet,Modal,ScrollView,Button } from 'react-native';
+import {Pressable,Text,View, TextInput,StyleSheet,Modal,ScrollView,FlatList,Button } from 'react-native';
 import {Form} from 'react-native-form-component';
 import React,{useState} from 'react'
 import {Calendar} from 'react-native-calendars';
@@ -27,8 +27,10 @@ const Calendarpage = () => {
       }
 
   return (
-    <ScrollView>
-      <View style={{alignItems: 'center', justifyContent: 'center'}}>
+    <ScrollView
+     
+    >
+      <View  >
         <Modal
           style={styles.modal}
           animationType="slide"
@@ -38,6 +40,9 @@ const Calendarpage = () => {
             console.log('Modal 닫힘');
             setModalVisible(!modalVisible);
           }}>
+          <Pressable 
+          style={{flex:1, backgroundColor:'transparent'}} 
+          onPress={()=> setModalVisible(false)}>
           <View
             style={styles.box}
             onPress={() => setModalVisible(!modalVisible)}>
@@ -59,18 +64,22 @@ const Calendarpage = () => {
               <Button title="삭제" disabled color="#2c2c2c" />
             </Form>
           </View>
+          </Pressable>
+
         </Modal>
       </View>
       <View>
         <Text>날짜를 클릭해 일기를 확인해보세요!</Text>
         <Calendar
           style={styles.customStyle}
-          // blurRadius={this.modalVisible ? 4: 0}
           onDayPress={day => {
             setDate(day.dateString);
             setModalVisible(true);
           }}
         />
+        <FlatList>
+          <Text>잔디</Text>
+        </FlatList>
       </View>
     </ScrollView>
   );
@@ -79,11 +88,13 @@ const Calendarpage = () => {
 const styles = StyleSheet.create({
 
   modal:{
+    flex:1,
     marginTop:20,
     alignItems:'center',
     justifyContent:"center",
   },
   box:{
+    margin:30,
     width:350,
     height:330,
     alignItems:'center',
