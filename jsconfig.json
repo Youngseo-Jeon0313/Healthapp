@@ -1,8 +1,8 @@
 {
 "compilerOptions": {
-    "baseUrl":"HEALTHREACTNATIVE",
+    "baseUrl":"src",
 },
 "include": [
-    "HEALTHREACTNATIVE"
+    "src"
 ]
 }
