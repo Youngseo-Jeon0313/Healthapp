@@ -3,13 +3,15 @@ import {Form} from 'react-native-form-component';
 import React,{useState} from 'react'
 import {Calendar} from 'react-native-calendars';
 import axios from 'axios';
+import {useRecoilState} from "recoil";
+import {diarydateState, diarydesState} from "redux/store";
 
 
 const Calendarpage = () => {
 
-  const [date,setDate]=useState('');
+  const [date,setDate]=useRecoilState(diarydateState);
   const [modalVisible,setModalVisible]=useState(false);
-  const [description, setdescription]=useState('');
+  const [description, setdescription]=useRecoilState(diarydesState);
 
   const HandleSubmit =async() => {
     try{
